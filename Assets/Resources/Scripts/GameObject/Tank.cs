@@ -15,7 +15,7 @@ public class Tank : MonoBehaviour {
 
 	[SerializeField]private float 	m_currentAngle;				// 現在のフレームでの向いている角度
 	[SerializeField]private BaseStrategy<Tank> m_currentAttack;	// 現在の攻撃タイプ
-	private List<BaseStrategy>		m_attackList;				// 攻撃タイプリスト
+	private List<BaseStrategy<Tank>>		m_attackList;				// 攻撃タイプリスト
 
 
 	/**********************

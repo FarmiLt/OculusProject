@@ -22,5 +22,5 @@ public class BaseStrategy<Type> where Type : class {
 	/**********************
 	 *  実行処理
 	 **********************/
-	public virtual void Execute(Type owner){}
+	public virtual void Execute(){}
 }
