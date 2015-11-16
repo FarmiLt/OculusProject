@@ -1,0 +1,98 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class BiologicalWeapon : BaseEnemy {
+
+	[SerializeField]
+	private float arrivalTime_secs;
+
+	private bool isKnockingBack = false;
+
+	private GameObject target;
+	private Vector3 startPos;
+	private Vector3 endPos;
+	private float movingTime = 0;
+
+	private delegate void Execute ();
+	Execute execute;
+
+	// Use this for initialization
+	void Start () {
+		// 生成された時にプレイヤーの方向を向いておく
+		target = GameObject.FindWithTag ("Player");
+		transform.LookAt (target.transform);
+		startPos = transform.position;
+		endPos = target.transform.position;
+		execute = Stop;
+		StartCoroutine (Appear ());
+	}
+	
+	// Update is called once per frame
+	void Update () {
+		// 実行用関数
+		execute ();
+	}
+
+	private IEnumerator Appear () {
+		// 出現アニメーションの終了を待機して歩行モーションに遷移
+		yield return new WaitForSeconds (1.733f);
+		GetComponent<Animator> ().SetBool ("isRunning", true);
+		execute = Move;
+	}
+
+	private IEnumerator KnockBack () {
+		// ノックバックアニメーションの終了を待機して歩行モーションに遷移
+		yield return new WaitForSeconds (0.567f);
+		GetComponent<Animator> ().SetBool ("isHitDamage", false);
+		isKnockingBack = false;
+		execute = Move;
+	}
+
+	private IEnumerator Die () {
+		// 死亡アニメーションの終了を待機して自らを消す
+		yield return new WaitForSeconds (2);
+		Destroy (this.gameObject);
+	}
+
+	private void Stop () {
+	}
+
+	private void Move () {
+		// ターゲット方向へ移動
+		transform.position = Vector3.Lerp (startPos, endPos, movingTime / arrivalTime_secs);
+		movingTime += Time.deltaTime;
+
+		// ターゲット方向へ移動を終了したら攻撃
+		if (movingTime >= arrivalTime_secs) {
+			GetComponent<Animator> ().SetBool ("isRunning", false);
+			execute = Attack;
+		}
+	}
+
+	private void Attack () {
+	}
+
+	void OnTriggerEnter (Collider col) {
+		// 弾丸を撃ち込まれた場合
+		if (col.tag == "Bullet") {
+			// ノックバック中であっても弾丸を撃ちこまれている間はダメージを受ける
+			hitPoint -= 1;
+
+			// 死亡時の処理
+			if (hitPoint <= 0) {
+				// 死亡していた場合は衝突判定を行わない
+				GetComponent<SphereCollider> ().enabled = false;
+				StartCoroutine (Die ());
+				GetComponent<Animator> ().SetBool ("isKilled", true);
+				execute = Stop;
+			}
+			// ノックバック時の処理
+			else if (!isKnockingBack) {
+				isKnockingBack = true;
+				StartCoroutine (KnockBack ());
+				GetComponent<Animator> ().SetBool ("isHitDamage", true);
+				execute = Stop;
+			}
+		}
+	}
+}
