@@ -420,6 +420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446859c891ce9b64b84773e3f57923c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_pitchAngle: 0
+  m_yawAngle: 0
 --- !u!4 &1169288761
 Transform:
   m_ObjectHideFlags: 0

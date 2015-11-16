@@ -13,9 +13,11 @@ public class Tank : MonoBehaviour {
 	public float m_rotateValue;						// 回転量
 	public float m_moveSpeed;						// 移動速度
 
-	[SerializeField]private float 	m_currentAngle;				// 現在のフレームでの向いている角度
-	[SerializeField]private BaseStrategy<Tank> m_currentAttack;	// 現在の攻撃タイプ
-	private List<BaseStrategy<Tank>>		m_attackList;				// 攻撃タイプリスト
+	private float m_yawAngle;						// 左右回転角度
+	private float m_pitchAngle;						// 上下回転角度
+	[SerializeField]private float 				m_currentAngle;		// 現在のフレームでの向いている角度
+	[SerializeField]private BaseStrategy<Tank> 	m_currentAttack;	// 現在の攻撃タイプ
+	private List<BaseStrategy<Tank>>			m_attackList;		// 攻撃タイプリスト
 
 
 	/**********************
@@ -52,6 +54,7 @@ public class Tank : MonoBehaviour {
 			AdvancedForward();
 		}
 	}
+
 
 	/**********************
 	 *  直進処理
