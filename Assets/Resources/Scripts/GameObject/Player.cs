@@ -8,10 +8,7 @@ using System.Collections;
 public class Player : MonoBehaviour {
 
 	// メンバ変数
-	public float m_pitchAngle;		// 上下回転角度
-	public float m_yawAngle;		// 左右回転角度
-
-	
+		
 	/**********************
 	 *  更新処理
 	 **********************/
