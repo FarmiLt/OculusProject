@@ -20,6 +20,8 @@ public class Tank : MonoBehaviour {
 	private List<BaseStrategy<Tank>>			m_attackList;		// 攻撃タイプリスト
 
 
+	public ParticleSystem m_ps;
+
 	/**********************
 	 *  初期化処理
 	 **********************/

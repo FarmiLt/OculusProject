@@ -238,6 +238,7 @@ MonoBehaviour:
   m_rotateValue: 1
   m_moveSpeed: .5
   m_currentAngle: 0
+  m_ps: {fileID: 0}
 --- !u!1 &708905650
 GameObject:
   m_ObjectHideFlags: 0
