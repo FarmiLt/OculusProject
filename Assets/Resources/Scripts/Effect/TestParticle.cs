@@ -10,7 +10,6 @@ public class TestParticle : MonoBehaviour
 {
     public GameObject[] m_effectArray;
     private GameObject m_particle;
-    private int m_count;
 
     ///------------------------------------------------------------
     /// <summary>
