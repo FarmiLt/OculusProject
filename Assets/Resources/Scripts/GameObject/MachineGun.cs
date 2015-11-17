@@ -17,15 +17,11 @@ public class MachineGun : Wapon {
 
 	public void PullTrigger()
 	{
-		//Debug.Log("CreateBullet");
-		//GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,Quaternion.identity);
-		Debug.Log("PullTrigger");
 		StartCoroutine("Rapidfire");
 	}
 
 	public void ReleaseTrigger()
 	{
-		Debug.Log("ReleaseTrigger");
 		StopCoroutine("Rapidfire");
 	}
 
@@ -45,9 +41,7 @@ public class MachineGun : Wapon {
 
 	private void Fire()
 	{
-		Debug.Log("Fire");
 		GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,transform.rotation); 
-		bullet.transform.parent = transform.parent;
 	}
 
 
