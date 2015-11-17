@@ -15,12 +15,12 @@ public class MachineGun : Wapon {
 	void Update () {
 	}
 
-	public void PullTrigger()
+	public override void PullTrigger() 
 	{
 		StartCoroutine("Rapidfire");
 	}
 
-	public void ReleaseTrigger()
+	public override void ReleaseTrigger()
 	{
 		StopCoroutine("Rapidfire");
 	}

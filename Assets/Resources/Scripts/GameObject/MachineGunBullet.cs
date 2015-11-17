@@ -4,6 +4,7 @@ using System.Collections;
 public class MachineGunBullet : MonoBehaviour {
 
 	public float m_BulletForce;
+	public float m_BulletTorque;
 	public float m_LifeTime;
 
 	// Use this for initialization
@@ -12,16 +13,16 @@ public class MachineGunBullet : MonoBehaviour {
 		rig = GetComponent<Rigidbody>();
 
 		rig.AddForce(transform.TransformVector(new Vector3(0.0f,0.0f,m_BulletForce)));
-
+		rig.AddTorque(new Vector3(0.0f,0.0f,m_BulletTorque));
 		transform.parent = null;
 
 		StartCoroutine("lifeTime");
 	}
 
-	public IEnumerator lifeTime()
+	private IEnumerator lifeTime()
 	{
 		yield return new WaitForSeconds(m_LifeTime);
-		Debug.Log("DestroyBullet");
+		//Debug.Log("DestroyBullet");
 		Destroy(gameObject);
 	}
 }
