@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 464126}
   - 198: {fileID: 19857686}
   - 199: {fileID: 19967866}
+  - 114: {fileID: 11495060}
   m_Layer: 0
   m_Name: Particle_SandSmoke
   m_TagString: Untagged
@@ -27,8 +28,9 @@ GameObject:
   - 4: {fileID: 481548}
   - 198: {fileID: 19843980}
   - 199: {fileID: 19953580}
+  - 114: {fileID: 11420846}
   m_Layer: 0
-  m_Name: ParticleStone
+  m_Name: Particle_Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -59,6 +61,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 464126}
   m_RootOrder: 0
+--- !u!114 &11420846
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 197210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab233c4b44c3e54ca37a5ba13fb16a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11495060
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 108360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab233c4b44c3e54ca37a5ba13fb16a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19843980
 ParticleSystem:
   m_ObjectHideFlags: 1
