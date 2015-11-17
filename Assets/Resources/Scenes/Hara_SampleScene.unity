@@ -303,91 +303,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 96d5d206f41fa944da92b24a1864ac43, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &801441543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 801441547}
-  - 33: {fileID: 801441546}
-  - 65: {fileID: 801441545}
-  - 23: {fileID: 801441544}
-  - 114: {fileID: 801441548}
-  m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!23 &801441544
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801441543}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 1
-  m_ReflectionProbeUsage: 1
-  m_ProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_ImportantGI: 0
-  m_AutoUVMaxDistance: .5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!65 &801441545
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801441543}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!33 &801441546
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801441543}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &801441547
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801441543}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 2}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
---- !u!114 &801441548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 801441543}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa9a816a784bb764ca97c0a5daa8dbf2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1042549539
 GameObject:
   m_ObjectHideFlags: 0
@@ -417,9 +332,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_effectArray:
   - {fileID: 192284, guid: 13d1839c9698c494d8f065af3e814e94, type: 2}
-  - {fileID: 140068, guid: b40e888902fad974a92deb52a299dfdd, type: 2}
-  - {fileID: 103480, guid: 4ed6cf9acf0719e40b6ab468a67fe287, type: 2}
+  - {fileID: 169344, guid: 003501cdef326a44a9f459dc47ef93d4, type: 2}
   - {fileID: 118580, guid: ae779573786c4ce4eb1852fc1855c8e6, type: 2}
+  - {fileID: 103480, guid: 4ed6cf9acf0719e40b6ab468a67fe287, type: 2}
+  - {fileID: 140068, guid: b40e888902fad974a92deb52a299dfdd, type: 2}
   - {fileID: 185880, guid: 47fd1cdd3bc1d8142b41f91148dbc2e0, type: 2}
   - {fileID: 108360, guid: 310026a455ba7374f9cfaa77e8f94e55, type: 2}
 --- !u!4 &1042549541
