@@ -54,7 +54,7 @@ public class TankControlWithMouse : BaseTankControl {
 
 
 		// 左右回転
-		m_owner.YawAngle += Input.GetAxis ("Mouse X") * 1f;
+		m_owner.YawAngle += Input.GetAxis ("Mouse ScrollWheel") * m_owner.RotateValue;
 		// 上下回転
 		m_owner.PitchAngle += Input.GetAxis ("Mouse Y") * 1f;
 

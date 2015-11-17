@@ -18,7 +18,7 @@ public class Tank : MonoBehaviour {
 	[SerializeField]private float 				m_pitchAngle;		// 上下回転角度
 	[SerializeField]private BaseStrategy<Tank> 	m_currentAttack;	// 現在の攻撃タイプ
 	private List<BaseStrategy<Tank>>			m_attackList;		// 攻撃タイプリスト
-	private MachineGun							m_machineGun;		// マシンガン
+	private MachineGun[]						m_machineGuns;		// マシンガン
 
 	// プロパティ
 	public float YawAngle{
@@ -53,7 +53,11 @@ public class Tank : MonoBehaviour {
 	 **********************/
 	public void Initialize(){
 		m_yawAngle = m_startAngle;
-		m_machineGun = this.transform.FindChild("MachineGun").GetComponent<MachineGun>();
+		m_rotateValue = ConstantDataManager.Instance.tankTurningValue;
+
+		m_machineGuns = new MachineGun[2];
+		m_machineGuns[0] = this.transform.FindChild("MachineGun_L").GetComponent<MachineGun>();
+		m_machineGuns[1] = this.transform.FindChild("MachineGun_R").GetComponent<MachineGun>();
 
 		// マウスによるタンクコントロールを代入
 		m_tankController = new TankControlWithMouse(this);
@@ -107,7 +111,9 @@ public class Tank : MonoBehaviour {
 	 *  発射処理
 	 **********************/
 	public void Fire(){
-		m_machineGun.PullTrigger();
+		foreach( MachineGun gun in m_machineGuns ){
+			gun.PullTrigger();
+		}
 	}
 
 
@@ -115,7 +121,9 @@ public class Tank : MonoBehaviour {
 	 *  打ち止め処理
 	 **********************/
 	public void StopFire(){
-		m_machineGun.ReleaseTrigger();
+		foreach( MachineGun gun in m_machineGuns ){
+		gun.ReleaseTrigger();
+		}
 	}
 
 	#endregion ========================================================================

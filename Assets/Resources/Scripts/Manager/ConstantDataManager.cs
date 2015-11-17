@@ -9,7 +9,7 @@ public class ConstantDataManager : SingletonMonoBehaviour<ConstantDataManager> {
 	// タンクのデータ
 	public float pitchMax;			// 上下回転の上限
 	public float pitchMin;			// 上下回転の下限
-	public float MouseThreshold;	// マウス反応閾値
+	public float tankTurningValue;	// タンク旋回速度
 
 
 	void Awake(){
