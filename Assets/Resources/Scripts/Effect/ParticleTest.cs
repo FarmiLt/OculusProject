@@ -9,6 +9,7 @@ using System.Collections;
 public class ParticleTest : MonoBehaviour
 {
     public GameObject[] m_effectArray;
+    private GameObject m_particle;
 
     ///------------------------------------------------------------
     /// <summary>
@@ -47,8 +48,13 @@ public class ParticleTest : MonoBehaviour
 
             if (GUI.Button(new Rect(0, i * height, width, height), name) == true)
             {
-                Instantiate( m_effectArray[i] );
+                m_particle = Instantiate( m_effectArray[i] );
             }
+        }
+
+        if( m_particle != null )
+        {
+            //m_particle.GetComponent<ParticleObject>().CreateKeep();
         }
     }
 }
