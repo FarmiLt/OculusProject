@@ -37,6 +37,8 @@ public class TankControlWithMouse : BaseTankControl {
 		GetMousePosition();
 		m_previousMousePos = m_currentMousePos;
 
+		// カーソルをウィンドウから出さない
+		Screen.lockCursor = true;
 	}
 
 
@@ -47,13 +49,14 @@ public class TankControlWithMouse : BaseTankControl {
 
 		GetMousePosition();
 
-		Vector2 mouseMove = m_currentMousePos - m_previousMousePos;
-		Debug.Log ("MouseMove : " + mouseMove.x);
+		//Vector2 mouseMove = m_currentMousePos - m_previousMousePos;
+		//Debug.Log ("MouseMove : " + mouseMove.x);
+
 
 		// 左右回転
-		m_owner.YawAngle += mouseMove.x * 0.1f;
+		m_owner.YawAngle += Input.GetAxis ("Mouse X") * 1f;
 		// 上下回転
-		m_owner.PitchAngle += mouseMove.y * 0.1f;
+		m_owner.PitchAngle += Input.GetAxis ("Mouse Y") * 1f;
 
 		if ( Input.GetMouseButton((int)eMOUSEBUTTON.LEFT) ){
 			// 前進
