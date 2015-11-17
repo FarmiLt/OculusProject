@@ -10,8 +10,9 @@ GameObject:
   - 4: {fileID: 489090}
   - 198: {fileID: 19865766}
   - 199: {fileID: 19981658}
+  - 114: {fileID: 11464690}
   m_Layer: 0
-  m_Name: ParticleRocketFireSparks
+  m_Name: Particle_RocketFireSparks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,6 +28,7 @@ GameObject:
   - 4: {fileID: 409218}
   - 198: {fileID: 19822336}
   - 199: {fileID: 19905148}
+  - 114: {fileID: 11497562}
   m_Layer: 0
   m_Name: Particle_RocketSmoke
   m_TagString: Untagged
@@ -44,6 +46,7 @@ GameObject:
   - 4: {fileID: 479734}
   - 198: {fileID: 19813906}
   - 199: {fileID: 19913960}
+  - 114: {fileID: 11464720}
   m_Layer: 0
   m_Name: Particle_RocketFire
   m_TagString: Untagged
@@ -89,6 +92,39 @@ Transform:
   m_Children: []
   m_Father: {fileID: 479734}
   m_RootOrder: 0
+--- !u!114 &11464690
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 113758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab233c4b44c3e54ca37a5ba13fb16a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11464720
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab233c4b44c3e54ca37a5ba13fb16a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11497562
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 185822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab233c4b44c3e54ca37a5ba13fb16a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19813906
 ParticleSystem:
   m_ObjectHideFlags: 1
