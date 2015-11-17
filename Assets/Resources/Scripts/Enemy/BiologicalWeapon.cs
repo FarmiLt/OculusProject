@@ -80,7 +80,8 @@ public class BiologicalWeapon : BaseEnemy {
 			// ノックバック中であっても弾丸を撃ちこまれている間はダメージを受ける
 			hitPoint -= 1;
 
-			Instantiate (Resources.Load ("Prefabs/Effect/Particle_FlyingEnemyBlood"), col.transform.position, transform.rotation);
+			GameObject particle = Instantiate (Resources.Load ("Prefabs/Effect/Particle_FlyingEnemyBlood"), col.transform.position, transform.rotation) as GameObject;
+			particle.transform.rotation = Quaternion.AngleAxis (180, particle.transform.up);
 
 			// 死亡時の処理
 			if (hitPoint <= 0) {
