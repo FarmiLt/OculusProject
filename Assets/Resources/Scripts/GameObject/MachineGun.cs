@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MachineGun : Wapon {
+public class MachineGun : Wepon {
 
 	public GameObject bulletPrefab;
 	public float fireParSecond;

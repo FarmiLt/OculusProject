@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LaserLuncher : Wapon {
+public class LaserLuncher : Wepon {
 
 	public GameObject bulletPrefab;
 
