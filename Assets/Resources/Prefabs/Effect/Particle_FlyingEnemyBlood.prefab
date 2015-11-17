@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 444624}
   - 198: {fileID: 19841216}
   - 199: {fileID: 19996302}
+  - 114: {fileID: 11478514}
   m_Layer: 0
   m_Name: Particle_FlyingEnemyBlood
   m_TagString: Untagged
@@ -27,6 +28,7 @@ GameObject:
   - 4: {fileID: 483424}
   - 198: {fileID: 19810288}
   - 199: {fileID: 19993316}
+  - 114: {fileID: 11475904}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -59,6 +61,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 444624}
   m_RootOrder: 0
+--- !u!114 &11475904
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 184994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab233c4b44c3e54ca37a5ba13fb16a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11478514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ab233c4b44c3e54ca37a5ba13fb16a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19810288
 ParticleSystem:
   m_ObjectHideFlags: 1

@@ -6,10 +6,11 @@ using System.Collections;
 /// パーティクルを実行するクラス
 /// </summary>
 ///------------------------------------------------------------
-public class ParticleTest : MonoBehaviour
+public class TestParticle : MonoBehaviour
 {
     public GameObject[] m_effectArray;
     private GameObject m_particle;
+    private int m_count;
 
     ///------------------------------------------------------------
     /// <summary>
@@ -38,23 +39,23 @@ public class ParticleTest : MonoBehaviour
     ///------------------------------------------------------------
     void OnGUI()
     {
+        // 幅・高さ
         float width = 200.0f;
         float height = 50.0f;
 
+        // パーティクルの数だけボタンを生成する
         for( int i = 0; i < m_effectArray.Length; ++i )
         {
+            // ボタンに書く文字を調整する
             string name = m_effectArray[i].ToString();
             name = name.Replace("(UnityEngine.GameObject)", "");
 
+            // ボタン生成
             if (GUI.Button(new Rect(0, i * height, width, height), name) == true)
             {
-                m_particle = Instantiate( m_effectArray[i] );
+                // ボタンを押すとパーティクルを生成
+                Instantiate(m_effectArray[i]);
             }
-        }
-
-        if( m_particle != null )
-        {
-            //m_particle.GetComponent<ParticleObject>().CreateKeep();
         }
     }
 }

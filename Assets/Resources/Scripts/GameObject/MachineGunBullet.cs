@@ -17,4 +17,9 @@ public class MachineGunBullet : MonoBehaviour {
 	void Update () {
 	
 	}
+
+	void Fire(Vector3 force)
+	{
+		rig.AddForce(force);
+	}
 }

@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Test : MonoBehaviour {
+public class Wapon : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -10,6 +10,9 @@ public class Test : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position += new Vector3( 0.0f, 0.0f, 0.1f );
+	
 	}
+
+	public virtual void PullTrigger(){}
+	public virtual void ReleaseTrigger(){}
 }
