@@ -7,9 +7,17 @@ using System.Collections;
 
 public class TankControlWithMouse : BaseTankControl {
 
+
+	// マウス列挙型
+	public enum eMOUSEBUTTON{
+		LEFT = 0,
+		RIGHT = 1,
+		MIDDLE = 2,
+	}
+
+
 	// メンバ変数
-	public Vector2 	m_screenCenter;		// スクリーン中心
-	public float 	m_threshold;		// マウス移動の閾値(ゆとり)
+	public Vector2  m_previousMousePos;	// 前回のマウス座標
 	public Vector2	m_currentMousePos;	// マウスの座標
 
 	
@@ -25,10 +33,8 @@ public class TankControlWithMouse : BaseTankControl {
 	 *  初期化処理
 	 **********************/
 	public override void Initialize(){
-		// スクリーンの中心点取得
-		m_screenCenter = new Vector2( Screen.width * 0.5f, Screen.height * 0.5f );
-		// マウスの反応閾値を取得
-		m_threshold = ConstantDataManager.Instance.MouseThreshold;
+		GetMousePosition();
+		m_previousMousePos = m_currentMousePos;
 	}
 
 
@@ -36,25 +42,37 @@ public class TankControlWithMouse : BaseTankControl {
 	 *  実行処理
 	 **********************/
 	public override void Execute(){
+
+		GetMousePosition();
+
+		Vector2 mouseMove = m_currentMousePos - m_previousMousePos;
+		Debug.Log ("MouseMove : " + mouseMove.x);
+
+		// 左右回転
+		m_owner.YawAngle += mouseMove.x * 0.1f;
+		// 上下回転
+		m_owner.PitchAngle += mouseMove.y * 0.1f;
+
+		if ( Input.GetMouseButton((int)eMOUSEBUTTON.LEFT) ){
+			// 前進
+			m_owner.AdvancedForward();
+		}
+		if ( Input.GetMouseButton((int)eMOUSEBUTTON.RIGHT) ){
+			// 後退
+			m_owner.LeaveBehind();
+		}
+
+		m_previousMousePos = m_currentMousePos;
+	}
+
+
+	/**********************
+	 *  マウス座標取得処理
+	 **********************/
+	public void GetMousePosition(){
 		// マウスのスクリーン座標取得
 		Vector3 mousePos = Input.mousePosition;
 		m_currentMousePos = new Vector2(mousePos.x, mousePos.y);
-
-		if ( m_currentMousePos.x >= m_screenCenter.x + m_threshold ){
-			// 時計回り
-			m_owner.YawAngle += m_owner.RotateValue;
-		}
-		if ( m_currentMousePos.x <= m_screenCenter.x - m_threshold ){
-			// 反時計まわり
-			m_owner.YawAngle -= m_owner.RotateValue;
-		}
-		if ( m_currentMousePos.y <= m_screenCenter.y - m_threshold ){
-			// 下を向く
-			m_owner.PitchAngle += m_owner.RotateValue;
-		}
-		if ( m_currentMousePos.y >= m_screenCenter.y + m_threshold ){
-			// 上を向く
-			m_owner.PitchAngle -= m_owner.RotateValue;
-		}
 	}
+
 }

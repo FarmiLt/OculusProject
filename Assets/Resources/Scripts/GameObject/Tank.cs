@@ -95,6 +95,9 @@ public class Tank : MonoBehaviour {
 	 *  後退処理
 	 **********************/
 	public void LeaveBehind(){
+		this.transform.localPosition -= new Vector3(m_moveSpeed * Mathf.Sin(Mathf.Deg2Rad * m_yawAngle),
+		                                            0f,
+		                                            m_moveSpeed * Mathf.Cos(Mathf.Deg2Rad * m_yawAngle));
 	}
 
 
