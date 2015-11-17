@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MachineGun : MonoBehaviour {
+public class MachineGun : Wapon {
 
 	public GameObject bulletPrefab;
 	public float fireParSecond;
@@ -46,7 +46,7 @@ public class MachineGun : MonoBehaviour {
 	private void Fire()
 	{
 		Debug.Log("Fire");
-		GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,Quaternion.identity);
+		GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,transform.rotation);
 	}
 
 
