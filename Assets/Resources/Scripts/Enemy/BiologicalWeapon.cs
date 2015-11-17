@@ -21,8 +21,9 @@ public class BiologicalWeapon : BaseEnemy {
 		// 生成された時にプレイヤーの方向を向いておく
 		target = GameObject.FindWithTag ("Player");
 		transform.LookAt (target.transform);
+		//transform.rotation = Quaternion.Euler (new Vector3 (0, transform.rotation.eulerAngles.y, 0));
 		startPos = transform.position;
-		endPos = target.transform.position;
+		endPos = new Vector3 (target.transform.position.x, 0, target.transform.position.z);
 		execute = Stop;
 		StartCoroutine (Appear ());
 	}
