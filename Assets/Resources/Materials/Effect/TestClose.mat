@@ -6,8 +6,8 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Plane
-  m_Shader: {fileID: 10704, guid: 0000000000000000f000000000000000, type: 0}
+  m_Name: TestClose
+  m_Shader: {fileID: 4800000, guid: 71fb7bd6d4c5ecd42b35bd156394e270, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: 2000
@@ -19,7 +19,7 @@ Material:
         first:
           name: _MainTex
         second:
-          m_Texture: {fileID: 2800000, guid: a301f27672ab0ed4b89d355c574e4a94, type: 3}
+          m_Texture: {fileID: 2800000, guid: 5a710b18c035c7446bba18222ca128df, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
       data:
@@ -80,9 +80,9 @@ Material:
           m_Offset: {x: 0, y: 0}
       data:
         first:
-          name: _SpecGlossMap
+          name: _Ramp
         second:
-          m_Texture: {fileID: 0}
+          m_Texture: {fileID: 2800000, guid: 592f628fa66e50640a6254979af31c61, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -136,8 +136,12 @@ Material:
         second: 0
       data:
         first:
-          name: _InvFade
-        second: 1
+          name: _Amount
+        second: 1.10000002
+      data:
+        first:
+          name: _Outline
+        second: .0299999993
     m_Colors:
       data:
         first:
@@ -146,12 +150,8 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: .301470578, g: .301470578, b: .301470578, a: 1}
+        second: {r: 1, g: 1, b: 1, a: 0}
       data:
         first:
-          name: _SpecColor
-        second: {r: .200000003, g: .200000003, b: .200000003, a: 1}
-      data:
-        first:
-          name: _TintColor
-        second: {r: .5, g: .5, b: .5, a: .5}
+          name: _OutlineColor
+        second: {r: .0344824754, g: 0, b: 1, a: 1}
