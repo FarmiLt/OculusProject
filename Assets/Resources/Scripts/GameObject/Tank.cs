@@ -53,7 +53,7 @@ public class Tank : MonoBehaviour {
 	 **********************/
 	public void Initialize(){
 		m_yawAngle = m_startAngle;
-		m_machineGun = this.transform.FindChild("MachineGun").FindChild("Barrel").GetComponent<MachineGun>();
+		m_machineGun = this.transform.FindChild("MachineGun").GetComponent<MachineGun>();
 
 		// マウスによるタンクコントロールを代入
 		m_tankController = new TankControlWithMouse(this);

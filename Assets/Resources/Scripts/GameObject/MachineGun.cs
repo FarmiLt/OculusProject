@@ -46,7 +46,8 @@ public class MachineGun : Wapon {
 	private void Fire()
 	{
 		Debug.Log("Fire");
-		GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,transform.rotation);
+		GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,transform.rotation); 
+		bullet.transform.parent = transform.parent;
 	}
 
 
