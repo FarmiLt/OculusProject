@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class LaserLuncherBullet : MonoBehaviour {
+public class LaserLauncherBullet : MonoBehaviour {
 
 	public float m_MoveSpeedParSec;
 	public float m_LifeTime;
@@ -11,6 +11,8 @@ public class LaserLuncherBullet : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		m_MoveVec = transform.TransformVector(new Vector3(0.0f,0.0f,m_MoveSpeedParSec));
+
+		 StartCoroutine("lifeTime");
 	}
 	
 	// Update is called once per frame
