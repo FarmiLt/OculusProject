@@ -26,6 +26,7 @@ public class BiologicalWeapon : BaseEnemy {
 		endPos = new Vector3 (target.transform.position.x, 0, target.transform.position.z);
 		execute = Stop;
 		Instantiate (Resources.Load ("Prefabs/Effect/Particle_SandSmoke"), transform.position, transform.rotation);
+		AudioManager.Instance.PlaySE ((int)AudioDataList.eSELIST.APPEAR_BIOLOGICAL_WEAPON, GetComponent<AudioSource> ());
 		StartCoroutine (Appear ());
 	}
 	
@@ -53,7 +54,8 @@ public class BiologicalWeapon : BaseEnemy {
 	private IEnumerator Die () {
 		// 死亡アニメーションの終了を待機して自らを消す
 		yield return new WaitForSeconds (0.7f);
-        Instantiate(Resources.Load("Prefabs/Effect/Particle_Explosion"), transform.position, transform.rotation);
+		GameObject particle = Instantiate (Resources.Load ("Prefabs/Effect/Particle_Explosion"), transform.position, transform.rotation) as GameObject;
+		AudioManager.Instance.PlaySE ((int)AudioDataList.eSELIST.EXPLOSION, particle.GetComponent<AudioSource> ());
 		Destroy (this.gameObject);
 	}
 
@@ -84,6 +86,8 @@ public class BiologicalWeapon : BaseEnemy {
 			GameObject particle = Instantiate (Resources.Load ("Prefabs/Effect/Particle_FlyingEnemyBlood"), col.transform.position, transform.rotation) as GameObject;
 			particle.transform.rotation = Quaternion.AngleAxis (180, particle.transform.up);
 
+			AudioManager.Instance.PlaySE ((int)AudioDataList.eSELIST.HIT_BULLET, GetComponent<AudioSource> ());
+
 			// 死亡時の処理
 			if (hitPoint <= 0) {
 				// 死亡していた場合は衝突判定を行わない
@@ -102,7 +106,19 @@ public class BiologicalWeapon : BaseEnemy {
 		}
 
 		if (col.tag == "Player") {
-			Instantiate (Resources.Load ("Prefabs/Effect/Particle_Explosion"), transform.position, transform.rotation);
+			GameObject particle = Instantiate (Resources.Load ("Prefabs/Effect/Particle_Explosion"), transform.position, transform.rotation) as GameObject;
+			AudioManager.Instance.PlaySE ((int)AudioDataList.eSELIST.EXPLOSION, particle.GetComponent<AudioSource> ());
+
+			Vector3 vec1 = col.transform.forward;
+			vec1 = new Vector3 (vec1.x, 0, vec1.z);
+			Vector3 vec2 = transform.position - col.transform.position;
+			vec2 = new Vector3 (vec2.x, 0, vec2.z);
+			float rotationAngle = Vector3.Angle (vec1, vec2);
+			Vector3 axis = Vector3.Cross (vec2, vec1);
+			axis = new Vector3 (axis.x, axis.z, axis.y);
+			GameObject getHitUI = Instantiate (Resources.Load ("Prefabs/UI/GetHitUI"), Vector3.zero, Quaternion.AngleAxis (rotationAngle, axis)) as GameObject;
+			getHitUI.transform.SetParent (GameObject.FindWithTag ("UICanvas").transform, false);
+
 			Destroy (this.gameObject);
 		}
 	}
