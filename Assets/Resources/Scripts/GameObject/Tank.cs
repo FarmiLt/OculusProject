@@ -29,7 +29,7 @@ public class Tank : MonoBehaviour {
 
 	[SerializeField]private float 	m_yawAngle;						// 左右回転角度
 	[SerializeField]private float 	m_pitchAngle;					// 上下回転角度
-	private Wepon[]					m_equipGuns = new Wepon[2];		// 現在装備している銃
+	private Weapon[]				m_equipGuns = new Weapon[2];	// 現在装備している銃
 	
 
 	// プロパティ
@@ -134,7 +134,7 @@ public class Tank : MonoBehaviour {
 	 *  発射処理
 	 **********************/
 	public void Fire(){
-		foreach( Wepon gun in m_equipGuns ){
+		foreach( Weapon gun in m_equipGuns ){
 			gun.PullTrigger();
 		}
 	}
@@ -144,7 +144,7 @@ public class Tank : MonoBehaviour {
 	 *  打ち止め処理
 	 **********************/
 	public void StopFire(){
-		foreach( Wepon gun in m_equipGuns ){
+		foreach( Weapon gun in m_equipGuns ){
 		gun.ReleaseTrigger();
 		}
 	}
@@ -155,7 +155,7 @@ public class Tank : MonoBehaviour {
 	 **********************/
 	public void SetWeapon(){
 		for( int i = 0; i < 2; ++i ){
-			m_equipGuns[i] = m_guns[i + m_currentGunType * (int)eGUNTYPE.TYPE_MAX].GetComponent<Wepon>();
+			m_equipGuns[i] = m_guns[i + m_currentGunType * (int)eGUNTYPE.TYPE_MAX].GetComponent<Weapon>();
 		}
 	}
 
