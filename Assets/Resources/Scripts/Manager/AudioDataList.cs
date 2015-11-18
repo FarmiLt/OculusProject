@@ -13,7 +13,11 @@ public class AudioDataList {
 	// SEリストの列挙型
 	// ※　必ずAudioManagerのselistに追加した順に記述する
 	public enum eSELIST{
-		SAMPLE = 0,
+		APPEAR_BIOLOGICAL_WEAPON = 0,
+		CHANGE_GUN_BURREL,
+		EXPLOSION,
+		HIT_BULLET,
+		SHOT_BULLET
 	}
 
 }
