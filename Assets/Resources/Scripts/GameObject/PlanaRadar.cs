@@ -12,7 +12,7 @@ public class PlanaRadar : MonoBehaviour {
 	private BoxCollider m_Collider;
 	// Use this for initialization
 	void Start () {
-		Debug.Log("Launch Radar");
+		//Debug.Log("Launch Radar");
 		m_Collider = transform.GetComponent<BoxCollider>();
 
 		m_MoveVec = transform.TransformVector(new Vector3(0.0f,0.0f,m_MoveSpeedParSec));
@@ -29,7 +29,7 @@ public class PlanaRadar : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		Debug.Log("Collision! other tag:" + other.gameObject.tag);
+		//Debug.Log("Collision! other tag:" + other.gameObject.tag);
 		if(other.gameObject.tag == "Enemy")
 		{
 			GameObject target = other.gameObject;
