@@ -109,15 +109,15 @@ public class BiologicalWeapon : BaseEnemy {
 			GameObject particle = Instantiate (Resources.Load ("Prefabs/Effect/Particle_Explosion"), transform.position, transform.rotation) as GameObject;
 			AudioManager.Instance.PlaySE ((int)AudioDataList.eSELIST.EXPLOSION, particle.GetComponent<AudioSource> ());
 
-			Vector3 vec1 = col.transform.forward;
-			vec1 = new Vector3 (vec1.x, 0, vec1.z);
-			Vector3 vec2 = transform.position - col.transform.position;
-			vec2 = new Vector3 (vec2.x, 0, vec2.z);
-			float rotationAngle = Vector3.Angle (vec1, vec2);
-			Vector3 axis = Vector3.Cross (vec2, vec1);
-			axis = new Vector3 (axis.x, axis.z, axis.y);
-			GameObject getHitUI = Instantiate (Resources.Load ("Prefabs/UI/GetHitUI"), Vector3.zero, Quaternion.AngleAxis (rotationAngle, axis)) as GameObject;
-			getHitUI.transform.SetParent (GameObject.FindWithTag ("UICanvas").transform, false);
+			//Vector3 vec1 = col.transform.forward;
+			//vec1 = new Vector3 (vec1.x, 0, vec1.z);
+			//Vector3 vec2 = transform.position - col.transform.position;
+			//vec2 = new Vector3 (vec2.x, 0, vec2.z);
+			//float rotationAngle = Vector3.Angle (vec1, vec2);
+			//Vector3 axis = Vector3.Cross (vec2, vec1);
+			//axis = new Vector3 (axis.x, axis.z, axis.y);
+			//GameObject getHitUI = Instantiate (Resources.Load ("Prefabs/UI/GetHitUI"), Vector3.zero, Quaternion.AngleAxis (rotationAngle, axis)) as GameObject;
+			//getHitUI.transform.SetParent (GameObject.FindWithTag ("UICanvas").transform, false);
 
 			Destroy (this.gameObject);
 		}
