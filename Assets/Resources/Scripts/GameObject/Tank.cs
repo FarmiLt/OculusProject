@@ -54,19 +54,11 @@ public class Tank : MonoBehaviour {
 	/**********************
 	 *  武器チェンジ処理
 	 **********************/
-	public void ChangeWeapon(bool _isNext){
+	public void ChangeWeapon(){
 		m_previousGunType = m_currentGunType;
 
-		if ( _isNext ){
-			// カウントアップ
-			m_currentGunType = (m_currentGunType + 1) % (int)eGUNTYPE.TYPE_MAX;
-		}
-		else{
-			// カウントダウン
-			m_currentGunType = (m_currentGunType + (int)eGUNTYPE.TYPE_MAX - 1) % (int)eGUNTYPE.TYPE_MAX;
-		}
-
-		Debug.Log ("Prev : " + m_previousGunType + ", Cur : " + m_currentGunType);
+		// カウントアップ
+		m_currentGunType = (m_currentGunType + 1) % (int)eGUNTYPE.TYPE_MAX;
 
 		SetWeapon ();
 		ShowWeapon();

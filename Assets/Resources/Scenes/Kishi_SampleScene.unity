@@ -1391,6 +1391,10 @@ Prefab:
       propertyPath: pedestal
       value: 
       objectReference: {fileID: 191583089}
+    - target: {fileID: 11448994, guid: a7f7a83a730ac41478aa39dfa98c2df5, type: 2}
+      propertyPath: distance
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a7f7a83a730ac41478aa39dfa98c2df5, type: 2}
   m_IsPrefabParent: 0

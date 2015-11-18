@@ -30,22 +30,6 @@ public class Player : MonoBehaviour {
 		if ( Input.GetKey (KeyCode.L) ){
 			this.transform.Rotate (new Vector3(0f, 1f, 0f));
 		}
-		if ( Input.GetKeyDown( KeyCode.Q ) ){
-			// 武器切り換え(+)
-			m_tank.ChangeWeapon(true);
-		}
-		if ( Input.GetKeyDown( KeyCode.E ) ){
-			// 武器切り換え(-)
-			m_tank.ChangeWeapon(false);
-		}
-		if ( Input.GetKeyDown(KeyCode.Space) ){
-			// 撃てぃ！
-			m_tank.Fire ();
-		}
-		if ( Input.GetKeyUp(KeyCode.Space) ){
-			// 撃ち方止め！
-			m_tank.StopFire();
-		}
 	}
 
 
