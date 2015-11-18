@@ -21,10 +21,11 @@ public class BiologicalWeapon : BaseEnemy {
 		// 生成された時にプレイヤーの方向を向いておく
 		target = GameObject.FindWithTag ("Player");
 		transform.LookAt (target.transform);
-		//transform.rotation = Quaternion.Euler (new Vector3 (0, transform.rotation.eulerAngles.y, 0));
+		transform.rotation = Quaternion.Euler (new Vector3 (0, transform.rotation.eulerAngles.y, 0));
 		startPos = transform.position;
 		endPos = new Vector3 (target.transform.position.x, 0, target.transform.position.z);
 		execute = Stop;
+		Instantiate (Resources.Load ("Prefabs/Effect/Particle_SandSmoke"), transform.position, transform.rotation);
 		StartCoroutine (Appear ());
 	}
 	
@@ -79,6 +80,9 @@ public class BiologicalWeapon : BaseEnemy {
 			// ノックバック中であっても弾丸を撃ちこまれている間はダメージを受ける
 			hitPoint -= 1;
 
+			GameObject particle = Instantiate (Resources.Load ("Prefabs/Effect/Particle_FlyingEnemyBlood"), col.transform.position, transform.rotation) as GameObject;
+			particle.transform.rotation = Quaternion.AngleAxis (180, particle.transform.up);
+
 			// 死亡時の処理
 			if (hitPoint <= 0) {
 				// 死亡していた場合は衝突判定を行わない
@@ -94,6 +98,11 @@ public class BiologicalWeapon : BaseEnemy {
 				GetComponent<Animator> ().SetBool ("isHitDamage", true);
 				execute = Stop;
 			}
+		}
+
+		if (col.tag == "Player") {
+			Instantiate (Resources.Load ("Prefabs/Effect/Particle_Explosion"), transform.position, transform.rotation);
+			Destroy (this.gameObject);
 		}
 	}
 }

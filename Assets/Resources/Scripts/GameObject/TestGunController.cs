@@ -4,11 +4,11 @@ using System.Collections;
 public class TestGunController : MonoBehaviour {
 
 	public GameObject gun;
-	MachineGun gunScript;
+	Wepon gunScript;
 
 	// Use this for initialization
 	void Start () {
-		gunScript = gun.GetComponent<MachineGun>();
+		gunScript = gun.GetComponent<Wepon>();
 	}
 	
 	// Update is called once per frame

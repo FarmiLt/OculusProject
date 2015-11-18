@@ -3,23 +3,26 @@ using System.Collections;
 
 public class MachineGunBullet : MonoBehaviour {
 
-	public float bulletForce;
-	private Rigidbody rig;
+	public float m_BulletForce;
+	public float m_BulletTorque;
+	public float m_LifeTime;
 
 	// Use this for initialization
 	void Start () {
+		Rigidbody rig;
 		rig = GetComponent<Rigidbody>();
 
-		rig.AddForce(0.0f,0.0f, bulletForce);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
+		rig.AddForce(transform.TransformVector(new Vector3(0.0f,0.0f,m_BulletForce)));
+		rig.AddTorque(new Vector3(0.0f,0.0f,m_BulletTorque));
+		transform.parent = null;
+
+		StartCoroutine("lifeTime");
 	}
 
-	void Fire(Vector3 force)
+	private IEnumerator lifeTime()
 	{
-		rig.AddForce(force);
+		yield return new WaitForSeconds(m_LifeTime);
+		//Debug.Log("DestroyBullet");
+		Destroy(gameObject);
 	}
 }

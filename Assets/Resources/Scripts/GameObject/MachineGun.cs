@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MachineGun : Wapon {
+public class MachineGun : Wepon {
 
 	public GameObject bulletPrefab;
 	public float fireParSecond;
@@ -15,17 +15,13 @@ public class MachineGun : Wapon {
 	void Update () {
 	}
 
-	public void PullTrigger()
+	public override void PullTrigger() 
 	{
-		//Debug.Log("CreateBullet");
-		//GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,Quaternion.identity);
-		Debug.Log("PullTrigger");
 		StartCoroutine("Rapidfire");
 	}
 
-	public void ReleaseTrigger()
+	public override void ReleaseTrigger()
 	{
-		Debug.Log("ReleaseTrigger");
 		StopCoroutine("Rapidfire");
 	}
 
@@ -45,9 +41,7 @@ public class MachineGun : Wapon {
 
 	private void Fire()
 	{
-		Debug.Log("Fire");
 		GameObject bullet = (GameObject)Instantiate(bulletPrefab,transform.position,transform.rotation); 
-		bullet.transform.parent = transform.parent;
 	}
 
 

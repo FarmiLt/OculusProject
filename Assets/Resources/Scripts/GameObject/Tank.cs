@@ -8,17 +8,29 @@ using System.Collections.Generic;
 
 public class Tank : MonoBehaviour {
 
+
+	// 銃タイプ列挙型
+	public enum eGUNTYPE{
+		MACHINEGUN = 0,
+		LASER,
+
+		TYPE_MAX,
+	}
+
+
 	// メンバ変数
+	[SerializeField] private GameObject[] m_guns;		// 銃オブジェクト(左,右の順に追加してくだちい)
 	public BaseTankControl	m_tankController = null;	// タンクコントロールクラス
 	public float 			m_startAngle;				// 初期での向いている角度
 	public float 			m_rotateValue;				// 回転量
 	public float 			m_moveSpeed;				// 移動速度
+	public int 				m_currentGunType;			// 現在の銃タイプ
+	public int				m_previousGunType;			// 1つ前の銃タイプ
 
-	[SerializeField]private float 				m_yawAngle;			// 左右回転角度
-	[SerializeField]private float 				m_pitchAngle;		// 上下回転角度
-	[SerializeField]private BaseStrategy<Tank> 	m_currentAttack;	// 現在の攻撃タイプ
-	private List<BaseStrategy<Tank>>			m_attackList;		// 攻撃タイプリスト
-	private MachineGun							m_machineGun;		// マシンガン
+	[SerializeField]private float 	m_yawAngle;						// 左右回転角度
+	[SerializeField]private float 	m_pitchAngle;					// 上下回転角度
+	private Wepon[]					m_equipGuns = new Wepon[2];		// 現在装備している銃
+	
 
 	// プロパティ
 	public float YawAngle{
@@ -39,6 +51,19 @@ public class Tank : MonoBehaviour {
 	}
 
 
+	/**********************
+	 *  武器チェンジ処理
+	 **********************/
+	public void ChangeWeapon(){
+		m_previousGunType = m_currentGunType;
+
+		// カウントアップ
+		m_currentGunType = (m_currentGunType + 1) % (int)eGUNTYPE.TYPE_MAX;
+
+		SetWeapon ();
+		ShowWeapon();
+	}
+
 
 	/**********************
 	 *  生成時処理
@@ -53,7 +78,10 @@ public class Tank : MonoBehaviour {
 	 **********************/
 	public void Initialize(){
 		m_yawAngle = m_startAngle;
-		m_machineGun = this.transform.FindChild("MachineGun").GetComponent<MachineGun>();
+		m_rotateValue = ConstantDataManager.Instance.tankTurningValue;
+
+		// 武器の設定
+		SetWeapon();
 
 		// マウスによるタンクコントロールを代入
 		m_tankController = new TankControlWithMouse(this);
@@ -65,8 +93,7 @@ public class Tank : MonoBehaviour {
 	 **********************/
 	void Update () {
 		ExecuteKeyEvent();
-
-		CalculateDirection ();
+		CalculateDirection();
 	}
 
 
@@ -107,7 +134,9 @@ public class Tank : MonoBehaviour {
 	 *  発射処理
 	 **********************/
 	public void Fire(){
-		m_machineGun.PullTrigger();
+		foreach( Wepon gun in m_equipGuns ){
+			gun.PullTrigger();
+		}
 	}
 
 
@@ -115,8 +144,34 @@ public class Tank : MonoBehaviour {
 	 *  打ち止め処理
 	 **********************/
 	public void StopFire(){
-		m_machineGun.ReleaseTrigger();
+		foreach( Wepon gun in m_equipGuns ){
+		gun.ReleaseTrigger();
+		}
 	}
+
+
+	/**********************
+	 *  銃の切り換え処理
+	 **********************/
+	public void SetWeapon(){
+		for( int i = 0; i < 2; ++i ){
+			m_equipGuns[i] = m_guns[i + m_currentGunType * (int)eGUNTYPE.TYPE_MAX].GetComponent<Wepon>();
+		}
+	}
+
+
+	/**********************
+	 *  銃の表示・非表示処理
+	 **********************/
+	public void ShowWeapon(){
+		for ( int i = 0; i < 2; ++i ){
+			// 武器の表示
+			m_guns[i + m_currentGunType * (int)eGUNTYPE.TYPE_MAX].SetActive(true);
+			// 武器の非表示
+			m_guns[i + m_previousGunType * (int)eGUNTYPE.TYPE_MAX].SetActive(false);
+		}
+	}
+
 
 	#endregion ========================================================================
 	
