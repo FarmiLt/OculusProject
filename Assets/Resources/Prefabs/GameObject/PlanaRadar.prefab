@@ -68,8 +68,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9dc4b7ba034491b866deb6ef3477ef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_DeploymentSpeed: 2
-  m_MoveSpeedParSec: 60
+  m_DeploymentSpeed: 1
+  m_MoveSpeedParSec: 6
   m_LifeTime: 15
 --- !u!1001 &100100000
 Prefab:
@@ -81,6 +81,14 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LifeTime
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_DeploymentSpeed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_MoveSpeedParSec
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

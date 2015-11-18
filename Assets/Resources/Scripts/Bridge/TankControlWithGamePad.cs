@@ -25,6 +25,8 @@ public class TankControlWithGamePad : BaseTankControl {
 	 *  実行処理
 	 **********************/
 	public override void Execute(){
+		m_owner.YawAngle += Input.GetAxis("Horizontaljoy") * m_owner.RotateValue;
+		m_owner.PitchAngle += Input.GetAxis("VerticalJoy") * m_owner.RotateValue;
 	}
 
 }
