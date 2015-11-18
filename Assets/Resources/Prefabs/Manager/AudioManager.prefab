@@ -51,7 +51,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190286}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .158840299, y: -1.42651391, z: 1.95264459}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 447004}
@@ -140,9 +140,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_bgmSource: {fileID: 0}
   m_bgmList:
-  - {fileID: 8300000, guid: a1f4ae692f626e243a4a642e0c2300b9, type: 3}
+  - {fileID: 0}
   m_seList:
-  - {fileID: 8300000, guid: 6b86693cd7d93954cbeb52cb48e3d5d0, type: 3}
+  - {fileID: 8300000, guid: 2ff5f1a151e3899418788bef3882c9af, type: 3}
+  - {fileID: 8300000, guid: eeb81ca1324d54cac9f9ce8670095646, type: 3}
+  - {fileID: 8300000, guid: a290f509977c841709b52b505ba689ad, type: 3}
+  - {fileID: 8300000, guid: 99e05a2e39e8f5b439d145544c5f2b5c, type: 3}
+  - {fileID: 8300000, guid: 33062687a939ef24d9ee9d14ac250089, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
