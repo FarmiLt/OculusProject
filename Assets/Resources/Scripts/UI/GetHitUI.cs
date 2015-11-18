@@ -21,6 +21,8 @@ public class GetHitUI : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		defaultAngle = transform.eulerAngles.z;
+		player = GameObject.FindWithTag ("Player");
 		StartCoroutine (FadeOut ());
 	}
 	
@@ -40,5 +42,7 @@ public class GetHitUI : MonoBehaviour {
 			yield return null;
 		}
 		GetComponent<Image> ().color = new Color (imageColor.r, imageColor.g, imageColor.b, 1);
+
+		Destroy (this.gameObject);
 	}
 }
