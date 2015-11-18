@@ -40,4 +40,9 @@ public class MissileLauncherBullet : MonoBehaviour {
 			yield return null;
 		}
 	}
+
+	void OnCollisionEnter(Collision collision)
+	{
+		Destroy(gameObject);
+	}
 }
