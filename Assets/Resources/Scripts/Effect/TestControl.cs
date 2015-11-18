@@ -35,8 +35,6 @@ public class TestControl : MonoBehaviour
         }
 
 
-
-
         if (Input.GetKey(KeyCode.A) == true)
         {
             transform.position += new Vector3(0.0f, m_velocity.y, 0.0f);

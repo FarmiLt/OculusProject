@@ -52,7 +52,8 @@ public class BiologicalWeapon : BaseEnemy {
 
 	private IEnumerator Die () {
 		// 死亡アニメーションの終了を待機して自らを消す
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (0.7f);
+        Instantiate(Resources.Load("Prefabs/Effect/Particle_Explosion"), transform.position, transform.rotation);
 		Destroy (this.gameObject);
 	}
 

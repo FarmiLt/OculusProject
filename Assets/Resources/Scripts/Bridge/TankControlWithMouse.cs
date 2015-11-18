@@ -49,22 +49,22 @@ public class TankControlWithMouse : BaseTankControl {
 
 		GetMousePosition();
 
-		//Vector2 mouseMove = m_currentMousePos - m_previousMousePos;
-		//Debug.Log ("MouseMove : " + mouseMove.x);
-
-
 		// 左右回転
 		m_owner.YawAngle += Input.GetAxis ("Mouse ScrollWheel") * m_owner.RotateValue;
-		// 上下回転
-		m_owner.PitchAngle += Input.GetAxis ("Mouse Y") * 1f;
+		// 上下回転(ホイール奥で右回転)
+		m_owner.PitchAngle += Input.GetAxis ("Mouse Y") * -1f;
 
-		if ( Input.GetMouseButton((int)eMOUSEBUTTON.LEFT) ){
-			// 前進
-			m_owner.AdvancedForward();
+		if ( Input.GetMouseButtonDown((int)eMOUSEBUTTON.LEFT) ){
+			// 発射
+			m_owner.Fire ();
 		}
-		if ( Input.GetMouseButton((int)eMOUSEBUTTON.RIGHT) ){
-			// 後退
-			m_owner.LeaveBehind();
+		if ( Input.GetMouseButtonUp((int)eMOUSEBUTTON.LEFT) ){
+			// 撃ち止め
+			m_owner.StopFire();
+		}
+		if ( Input.GetMouseButtonDown((int)eMOUSEBUTTON.RIGHT) ){
+			// 武器切り換え
+			m_owner.ChangeWeapon();
 		}
 
 		m_previousMousePos = m_currentMousePos;
