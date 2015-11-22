@@ -1,25 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 --- !u!1 &101940
-=======
---- !u!1 &168142
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   - 4: {fileID: 454246}
   - 198: {fileID: 19829646}
   - 199: {fileID: 19990426}
-=======
-  - 4: {fileID: 438158}
-  - 198: {fileID: 19871414}
-  - 199: {fileID: 19940136}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_Layer: 0
   m_Name: Particle_FlyingEnemyBlood
   m_TagString: Untagged
@@ -27,24 +17,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 --- !u!1 &156678
-=======
---- !u!1 &187464
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   - 4: {fileID: 482186}
   - 114: {fileID: 11439046}
-=======
-  - 4: {fileID: 405768}
-  - 114: {fileID: 11418476}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_Layer: 0
   m_Name: Effect_FlyingEnemyBlood
   m_TagString: Untagged
@@ -52,16 +33,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 --- !u!4 &454246
-=======
---- !u!4 &405768
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_GameObject: {fileID: 101940}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -83,62 +59,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &11439046
-=======
-  m_GameObject: {fileID: 187464}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 438158}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!4 &438158
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 168142}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.30173492, y: -.0964621753, z: -.204752609}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 405768}
-  m_RootOrder: 0
---- !u!114 &11418476
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_GameObject: {fileID: 156678}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a290bf8f84d009e42b12aa1e0312a2f8, type: 3}
-=======
-  m_GameObject: {fileID: 187464}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 260e259e961f2944ba7990e7219b2071, type: 3}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_Name: 
   m_EditorClassIdentifier: 
   m_lifeSecond: 5
   m_isLoop: 0
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 --- !u!198 &19829646
-=======
---- !u!198 &19871414
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_GameObject: {fileID: 101940}
-=======
-  m_GameObject: {fileID: 168142}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   lengthInSec: .5
   startDelay: 0
   speed: 1
@@ -1181,20 +1119,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 --- !u!199 &19990426
-=======
---- !u!199 &19940136
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_GameObject: {fileID: 101940}
-=======
-  m_GameObject: {fileID: 168142}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1231,27 +1161,8 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 156678}
-=======
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 187464}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_FlyingEnemyBlood.prefab
   m_IsPrefabParent: 1

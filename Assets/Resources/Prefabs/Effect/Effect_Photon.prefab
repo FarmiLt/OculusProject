@@ -1,25 +1,15 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 --- !u!1 &103206
-=======
---- !u!1 &167840
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   - 4: {fileID: 422770}
   - 198: {fileID: 19833446}
   - 199: {fileID: 19908330}
-=======
-  - 4: {fileID: 482746}
-  - 198: {fileID: 19802474}
-  - 199: {fileID: 19991054}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_Layer: 0
   m_Name: Particle_Photon
   m_TagString: Untagged
@@ -27,24 +17,15 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 --- !u!1 &141518
-=======
---- !u!1 &172076
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   - 4: {fileID: 444330}
   - 114: {fileID: 11403456}
-=======
-  - 4: {fileID: 451826}
-  - 114: {fileID: 11464168}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_Layer: 0
   m_Name: Effect_Photon
   m_TagString: Untagged
@@ -52,16 +33,11 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 --- !u!4 &422770
-=======
---- !u!4 &451826
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_GameObject: {fileID: 103206}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -83,62 +59,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!114 &11403456
-=======
-  m_GameObject: {fileID: 172076}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 482746}
-  m_Father: {fileID: 0}
-  m_RootOrder: 0
---- !u!4 &482746
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 167840}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.30173492, y: -.0964621753, z: -.204752609}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 451826}
-  m_RootOrder: 0
---- !u!114 &11464168
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_GameObject: {fileID: 141518}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a290bf8f84d009e42b12aa1e0312a2f8, type: 3}
-=======
-  m_GameObject: {fileID: 172076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 260e259e961f2944ba7990e7219b2071, type: 3}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_Name: 
   m_EditorClassIdentifier: 
   m_lifeSecond: 5
   m_isLoop: 0
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 --- !u!198 &19833446
-=======
---- !u!198 &19802474
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_GameObject: {fileID: 103206}
-=======
-  m_GameObject: {fileID: 167840}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   lengthInSec: 5
   startDelay: 0
   speed: 1
@@ -1181,20 +1119,12 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 --- !u!199 &19908330
-=======
---- !u!199 &19991054
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_GameObject: {fileID: 103206}
-=======
-  m_GameObject: {fileID: 167840}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1231,27 +1161,8 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-<<<<<<< HEAD:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 141518}
-=======
-    m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 172076}
->>>>>>> 3fc037c33a389b8b2725b4eeabe35bfa5f48e255:Assets/Resources/Prefabs/Effect/Effect_Photon.prefab
   m_IsPrefabParent: 1
