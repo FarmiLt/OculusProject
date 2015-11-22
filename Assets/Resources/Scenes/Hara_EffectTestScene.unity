@@ -189,7 +189,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &339410429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1455,13 +1455,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_effectArray:
-  - {fileID: 192284, guid: 13d1839c9698c494d8f065af3e814e94, type: 2}
-  - {fileID: 169344, guid: 003501cdef326a44a9f459dc47ef93d4, type: 2}
-  - {fileID: 118580, guid: ae779573786c4ce4eb1852fc1855c8e6, type: 2}
-  - {fileID: 103480, guid: 4ed6cf9acf0719e40b6ab468a67fe287, type: 2}
-  - {fileID: 140068, guid: b40e888902fad974a92deb52a299dfdd, type: 2}
-  - {fileID: 185880, guid: 47fd1cdd3bc1d8142b41f91148dbc2e0, type: 2}
-  - {fileID: 108360, guid: 310026a455ba7374f9cfaa77e8f94e55, type: 2}
+  - {fileID: 140430, guid: ec5f8fd953395dc4290b06b5acc64503, type: 2}
+  - {fileID: 128790, guid: 0936c73250a796749900258bf852ec5a, type: 2}
+  - {fileID: 187464, guid: 41b6355182d97824392fd0784b474105, type: 2}
+  - {fileID: 103830, guid: 04ef6a688c1b93a4eacd8db246c96108, type: 2}
+  - {fileID: 172076, guid: 42a8b0588c4be03448fbf2613abe7eda, type: 2}
+  - {fileID: 117924, guid: 3286bd5be6661ba4894ba9dba4ae4b31, type: 2}
+  - {fileID: 146974, guid: 219d6b3ae2c40f04089a8eb3a2da5ac6, type: 2}
 --- !u!4 &1042549541
 Transform:
   m_ObjectHideFlags: 0
