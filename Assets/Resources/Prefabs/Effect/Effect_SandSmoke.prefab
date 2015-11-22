@@ -96,7 +96,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 195894}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a290bf8f84d009e42b12aa1e0312a2f8, type: 3}
+  m_Script: {fileID: 11500000, guid: 291e6da7e0cb6f44c8dfd06207846724, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_lifeSecond: 5
@@ -2270,7 +2270,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_lifeSecond
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 195894}
